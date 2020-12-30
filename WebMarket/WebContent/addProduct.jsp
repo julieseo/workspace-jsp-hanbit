@@ -1,8 +1,9 @@
-<%@ page contentType="text/html; charset=utf-8" % >
+<%@ page contentType="text/html; charset=utf-8" %>
 	<html>
 
 	<head>
 		<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+		<script type="text/javascript" src="resources/js/validation.js"></script>
 		<title>상품 등록</title>
 	</head>
 
@@ -14,24 +15,24 @@
 			</div>
 		</div>
 		<div class="container">
-			<form name="newProduct" action="./processAddProduct.jsp" class="form-horizontal" method="post"
+			<form id="newProduct" name="newProduct" action="./processAddProduct.jsp" class="form-horizontal" method="post"
 				enctype="multipart/form-data">
 				<div class="form-group row">
 					<label class="col-sm-2">상품 코드</label>
 					<div class="col-sm-3">
-						<input type="text" name="productId" class="form-control">
+						<input type="text" id="productId" name="productId" class="form-control">
 					</div>
 				</div>
 				<div class="form-group row">
 					<label class="col-sm-2">상품명</label>
 					<div class="col-sm-3">
-						<input type="text" name="name" class="form-control">
+						<input type="text" id="name" name="name" class="form-control">
 					</div>
 				</div>
 				<div class="form-group row">
 					<label class="col-sm-2">가격</label>
 					<div class="col-sm-3">
-						<input type="text" name="unitPrice" class="form-control">
+						<input type="text" id="unitPrice" name="unitPrice" class="form-control">
 					</div>
 				</div>
 				<div class="form-group row">
@@ -55,7 +56,7 @@
 				<div class="form-group row">
 					<label class="col-sm-2">재고 수</label>
 					<div class="col-sm-3">
-						<input type="text" name="unitsInStock" class="form-control">
+						<input type="text" id="unitsInStock" name="unitsInStock" class="form-control">
 					</div>
 				</div>
 				<div class="form-group row">
@@ -69,12 +70,12 @@
 				<div class="form-group row">
 					<label class="col-sm-2">이미지</label>
 					<div class="col-sm-5">
-						<input type="file" name="productImage" class="form-control">
+						<input type="file" id="productImage" name="productImage" class="form-control">
 					</div>
 				</div>
 				<div class="form-group row">
 					<div class="col-sm-offset-2 col-sm-10 ">
-						<input type="submit" class="btn btn-primary" value="등록">
+						<input type="button" onclick="CheckAddProduct()" class="btn btn-primary" value="등록">
 					</div>
 				</div>
 			</form>
